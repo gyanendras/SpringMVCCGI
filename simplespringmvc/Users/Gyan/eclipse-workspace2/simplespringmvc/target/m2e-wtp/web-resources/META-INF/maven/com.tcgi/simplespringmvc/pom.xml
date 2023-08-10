@@ -24,7 +24,7 @@
 	</properties>
 
 	<dependencies>
-
+        
 		<!-- Spring core & mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -36,13 +36,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version> 
-			<scope>test</scope>
 		</dependency>
 
 		<!-- CGLib for @Configuration -->
@@ -108,8 +101,7 @@
 		<repository>
 			<id>springsource-milestones</id>
 			<name>SpringSource Milestones Proxy</name>
-			<url>
-				https://oss.sonatype.org/content/repositories/springsource-milestones</url>
+			<url>https://oss.sonatype.org/content/repositories/springsource-milestones</url>
 		</repository>
 	</repositories>
 
