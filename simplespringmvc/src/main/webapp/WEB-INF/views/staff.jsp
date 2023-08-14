@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="com.tcgi.simplespringmvc.Employee"%>
+<%@ page import="java.util.List"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +10,25 @@
 <title>Insert title here</title>
 </head>
 <body>
+<table style="border:1px blue solid">
+<tr><th>Name</th><th>DOB</th>
+</tr>
 	<%
 	Employee e = (Employee) request.getAttribute("e1");
-	for(int i=0;i<5;++i){
+	List l = (List)request.getAttribute("el1");
+	for(int i=0;i<l.size();++i){
+		Employee tmp = (Employee)l.get(i);
 	%>
 	
-	<h2><%=e.getFirstName()%></h2>
-	<h2><%=e.getDob()%></h2>
+	
+	<tr style="border:1px blue solid">
+	<td style="border:1px red solid"><%=tmp.getFirstName() %></td>
+	<td style="border:1px red solid"><%= tmp.getDob()%></td>
+	</tr>
+	
 
-<%}
-	%>
+<%}%>
+</table>
 
 </body>
 </html>

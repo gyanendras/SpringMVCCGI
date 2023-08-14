@@ -20,7 +20,7 @@
 </label>
 <%! int x = 20; %>
 
-<Form class="text-primary" action="http://localhost:8080/simplespringmvc/emp" method="get" onsubmit="true">
+<Form class="text-primary" action="http://localhost:8080/simplespringmvc/emp" method="post" onsubmit="true">
 	<label class="form-label" name="lbl1">Name</label>
 	<input type="text" name="fname" class="form-control">
 	<label name="errFname"></label>
