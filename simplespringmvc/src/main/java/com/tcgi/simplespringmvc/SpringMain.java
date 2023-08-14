@@ -1,5 +1,9 @@
 package com.tcgi.simplespringmvc;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -36,6 +40,17 @@ public class SpringMain {
 		DepInjConstructor  dij = ctx.getBean(DepInjConstructor.class);
 		
 		dij.greeting();
+		
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("jpa-example");
+		EntityManager em = emFactory.createEntityManager();
+		
+		em.getTransaction().begin();
+		Employee e = em.find(Employee.class, 200l);
+		System.out.println(e.getFirstName() +" "+ e.getLastName());
+		
+		em.getTransaction().commit();
+		em.close();
+		
 		
 	}
 
