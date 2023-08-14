@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.tcgi.simplespringmvc.domain.Employee;
 import com.tcgi.simplespringmvc.services.GreetingService;
 
 public class SpringMain {

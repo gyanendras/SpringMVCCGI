@@ -1,4 +1,4 @@
-package com.tcgi.simplespringmvc;
+package com.tcgi.simplespringmvc.domain;
 
 import java.time.LocalDate;
 
@@ -26,6 +26,8 @@ public class Employee {
 	
 	@Column(name="last_name")
 	String lastName;
+	
+	Department dept;
 	
 	@Transient
 	LocalDate dob;

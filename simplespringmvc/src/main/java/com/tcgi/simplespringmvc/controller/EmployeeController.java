@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.tcgi.simplespringmvc.Employee;
+import com.tcgi.simplespringmvc.domain.Employee;
 import com.tcgi.simplespringmvc.repo.EmployeeRepository;
 
 @Controller

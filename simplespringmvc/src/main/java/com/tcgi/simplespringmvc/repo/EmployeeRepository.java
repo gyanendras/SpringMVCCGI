@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 
-import com.tcgi.simplespringmvc.Employee;
+import com.tcgi.simplespringmvc.domain.Employee;
 
 @Controller
 public class EmployeeRepository {

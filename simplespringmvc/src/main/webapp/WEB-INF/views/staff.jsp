@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="com.tcgi.simplespringmvc.Employee"%>
+<%@ page import="com.tcgi.simplespringmvc.domain.Employee"%>
 <%@ page import="java.util.List"%>
 
 <!DOCTYPE html>
