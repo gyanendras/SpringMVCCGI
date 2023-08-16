@@ -26,7 +26,7 @@ class EmployeTest {
 	@Test
 	void test() {
 		Employee emp = new Employee();
-		emp.setEmployeeId(4464l);
+		//emp.setEmployeeId(4464l);
 		emp.setFirstName("Fname081623-1");
 		emp.setLastName("Lname081623-1");
 		emp.setEmail("a@b.com");

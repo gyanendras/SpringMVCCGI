@@ -18,9 +18,9 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-//@Configuration
-//@ComponentScan(basePackages = "com.tcgi.simplespringmvc")
-//@EnableWebMvc
+@Configuration
+@ComponentScan(basePackages = "com.tcgi.simplespringmvc")
+@EnableWebMvc
 public class MvcConfiguration implements WebMvcConfigurer {
 	@Autowired
 	private ApplicationContext applicationContext;

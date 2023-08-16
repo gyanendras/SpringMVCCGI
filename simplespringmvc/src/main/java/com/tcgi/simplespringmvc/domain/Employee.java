@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 @Entity(name="Employees")
 public class Employee {
 	@Id
-	// @GeneratedValue //(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="employee_id")
 	Long employeeId;
 	

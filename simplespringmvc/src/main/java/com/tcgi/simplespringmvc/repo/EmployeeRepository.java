@@ -17,13 +17,21 @@ public class EmployeeRepository {
 
 	public void addData(Employee e, List l){
 		//l.add(e);
+		em.getTransaction().begin();
+		e.setEmployeeId(4464l);
+		
 		em.persist(e);
+		em.getTransaction().commit();
+		em.close();
+		
+		
 	}
 	
 	public Employee retrieve(List l, String fname) {
 		
 		//return (Employee) l.get(0);
 		return em.find(Employee.class, 121l);
+		
 	}
 	
 	public void update(Employee e, List l) {
@@ -32,7 +40,7 @@ public class EmployeeRepository {
 	}
 	
 	public void delData(String fname, List l){
-		l.remove(0);
+		// l.remove(0);
 	}
 	
 }
