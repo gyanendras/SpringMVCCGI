@@ -42,6 +42,7 @@ public class EmployeeController {
 		// eList.add(emp);
 		
 		er.addData(e, eList);
+		emp = er.retrieve(eList, fname);
 		
 		pgAnValue.addObject("el1", eList);
 		pgAnValue.addObject("e1", emp);

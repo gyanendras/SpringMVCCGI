@@ -46,8 +46,10 @@ public class SpringMain {
 		EntityManager em = emFactory.createEntityManager();
 		
 		em.getTransaction().begin();
-		Employee e = em.find(Employee.class, 200l);
+		Employee e = em.find(Employee.class, 121l);
 		System.out.println(e.getFirstName() +" "+ e.getLastName());
+		System.out.println(e.getDept().getDepartmentName());
+		System.out.println(e.getDept().getEmpOfDeptt().size());
 		
 		em.getTransaction().commit();
 		em.close();

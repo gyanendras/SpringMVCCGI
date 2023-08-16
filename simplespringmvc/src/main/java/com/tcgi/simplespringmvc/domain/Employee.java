@@ -7,7 +7,13 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
@@ -18,6 +24,7 @@ import org.springframework.stereotype.Component;
 @Entity(name="Employees")
 public class Employee {
 	@Id
+	// @GeneratedValue //(strategy=GenerationType.IDENTITY)
 	@Column(name="employee_id")
 	Long employeeId;
 	
@@ -27,8 +34,22 @@ public class Employee {
 	@Column(name="last_name")
 	String lastName;
 	
-	Department dept;
+	@ManyToOne
+	@JoinColumn(name="department_id")
+	Department department;
 	
+	@Column(name="email")
+	String email;
+	
+	@Column(name="hire_date")
+	LocalDate hireDate;
+	
+	@Column(name="job_id")
+	String jobId;
+	
+	
+	
+
 	@Transient
 	LocalDate dob;
 	
@@ -67,6 +88,44 @@ public class Employee {
 		this.dob = dob;
 	}
 	
-	
+	public Department getDept() {
+		return department;
+	}
+
+	public void setDept(Department department) {
+		this.department = department;
+	}
+
+	public Long getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public LocalDate getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(LocalDate hireDate) {
+		this.hireDate = hireDate;
+	}
+
+	public String getJobId() {
+		return jobId;
+	}
+
+	public void setJobId(String jobId) {
+		this.jobId = jobId;
+	}
 
 }

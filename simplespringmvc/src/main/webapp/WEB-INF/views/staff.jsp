@@ -24,10 +24,19 @@
 	<tr style="border:1px blue solid">
 	<td style="border:1px red solid"><%=tmp.getFirstName() %></td>
 	<td style="border:1px red solid"><%= tmp.getDob()%></td>
+	<td style="border:1px red solid"><%= tmp.getDept().getDepartmentName()%></td>
 	</tr>
 	
 
 <%}%>
+<tr style="border:1px blue solid">
+	<td style="border:1px red solid"><%=e.getFirstName() %></td>
+	<td style="border:1px red solid"><%= e.getLastName()%></td>
+	<td style="border:1px red solid"><%= e.getDob()%></td>
+	
+	<td style="border:1px red solid"><%= e.getDept().getDepartmentName()%></td>
+	</tr>
+	
 </table>
 
 </body>
